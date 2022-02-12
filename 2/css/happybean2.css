@@ -1,0 +1,180 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font: 12pt/ 180% "나눔고딕";
+}
+h1,h2 {
+	width: 0; height: 0;
+	overflow: hidden;
+}
+/*따뜻한 세상 캠페인*/
+#sec1 {	
+	margin: auto;
+	background: #fddf9e url("../images/sec1.jpg") no-repeat center 10px/ 170%;
+	padding-top: 180px; /*동영상이 180픽셀 밑에 나온다*/
+	padding-bottom: 33px;
+	border-bottom: 5px solid #e3361c;
+}
+/*동영상*/
+#sec1> iframe {
+	width: 90%; height: 235px;
+	border: none;
+	display: block; margin: auto;
+}
+
+/*마음의 온도 높이기*/
+#sec2 {
+	background: #28a073;
+}
+#sec2> img {
+	width: 100%;
+}
+
+/*지난 이야기*/
+#sec3 {	
+	background: #d2f5e1;
+	text-align: center;
+	padding-top: 30pt;
+	overflow: hidden;
+}
+#sec3_1 {width: 50%;}
+/*둥근사각형버튼*/
+#radiusBtn {
+	display: none;
+}
+/*양쪽 반원형 버튼*/
+#story {
+	position: relative;
+}
+#story> div:not(#slide) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	width: 414px; height: 181px;
+	z-index: 1;
+}
+#story input {
+	width: 30px; height: 58px;
+	cursor: pointer;
+}
+/*슬라이드*/
+#slide {
+	width: calc(414px * 3);
+	position: relative;
+	display: flex;
+}
+#slide> img {
+	width: 414px;
+	height: 181px;
+	
+}
+/*확인하고 콩받기*/
+#sec3> button {
+	background: transparent; 
+	border: none;
+	margin:30pt auto;	
+}
+#sec3> button> img {
+	width: 50vw;
+}
+
+/*퀵배너*/
+#quick {display:none;}
+
+/*아이패드크기 이상*/
+@media (min-width: 768px){
+	#sec1 {
+		background-position: center top;
+		background-size: cover;
+		padding-top: 380px;/*동영상이 380px 밑으로*/
+		padding-bottom: 100px;
+	}
+	/*동영상*/
+	#sec1> iframe {
+		width: 673px; height: 380px;
+	}
+	/*둥근사각형버튼*/
+	#radiusBtn {		
+		display: flex;
+		justify-content: space-between;		
+		background: url("../images/dotLine.png") repeat-x center;
+		margin-top: 20pt;
+	}
+	#radiusBtn> input {
+		width: 200px; height: 56px;
+	}
+	/*지난이야기*/	
+	#story {		
+		width: 768px; 
+		margin-top: 20pt;
+	}
+	/*양쪽 반원형 버튼*/
+	#story>div:not(#slide) {
+		width: 768px;
+		height: 337px;
+	}
+	#slide> img {
+		width: 768px; height: 337px;
+	}
+	
+	/*퀵배너*/
+	#quick {
+		display: block;
+		position: absolute;
+		top: 280px; right: 0px;
+		
+	}
+	#quick> img {
+		width: 100px;
+	}
+}
+
+
+/*아이패드pro크기 이상*/
+@media (min-width: 1024px){
+	#sec1 {
+		height: 950px;
+		background-position: center 20px;
+		background-size: 1366px;
+		padding-top: 450px;
+	}
+	/*둥근사각형버튼*/
+	#radiusBtn {
+		width: 997px; margin:20pt auto;		
+	}
+	#radiusBtn> input {
+		width: 285px; height: 80px;		
+	}
+	/*지난이야기*/	
+	#story {
+		width: 997px; margin: auto;		
+		overflow: hidden;		
+	}
+	/*양쪽 반원형 버튼*/
+	#story> div:not(#slide){
+		width: 997px; height: 437px;
+	}
+	#story input {
+		width: 52px; height: 102px;
+	}
+	/*슬라이드*/
+	
+	#slide {
+		width: calc(997px * 3);
+	}
+	#slide> img {
+		width: 997px; height: 437px;
+	}
+	#sec3> button> img {
+	width: 40vw;
+}
+
+
+
+
+
